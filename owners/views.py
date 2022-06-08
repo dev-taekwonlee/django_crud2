@@ -53,7 +53,6 @@ class OwnerView(View):
               }
 
           )
-
       return JsonResponse({'result': result}, status=200)
 
 class DogView(View):
@@ -61,12 +60,12 @@ class DogView(View):
     try:
       data = json.loads(request.body)
 
-      dog_owner = Owner.objects.get(name=data['owner'])
+      dog_owner_id = data['owner_id'] # dog_owner = Owner.objects.get(name=data['owner'])도 괜찮다
       dog_name = data['name']
       dog_age = data['age']
 
       Dog.objects.create(
-        owner = dog_owner,
+        owner_id = dog_owner_id,
         name = dog_name,
         age = dog_age
       )
