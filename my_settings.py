@@ -1,7 +1,7 @@
 DATABASES = {
     'default' : {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'crud2_owner',
+        'NAME': 'crud2_movie',
         'USER': 'root',
         'PASSWORD': 'xornjszja',
         'HOST': '127.0.0.1',
